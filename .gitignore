@@ -1,0 +1,54 @@
+# ── Node ──────────────────────────────────────────────────────────────────────
+node_modules/
+npm-debug.log*
+.npm
+
+# ── Next.js ───────────────────────────────────────────────────────────────────
+MailSuite/frontend/.next/
+MailSuite/frontend/out/
+
+# ── Bases de données ──────────────────────────────────────────────────────────
+*.db
+*.db-shm
+*.db-wal
+
+# ── Sessions ──────────────────────────────────────────────────────────────────
+MailSuite/.sessions/
+
+# ── Credentials Google Workspace (SENSIBLE) ───────────────────────────────────
+MailSuite/gw_creds/
+!MailSuite/gw_creds/.gitkeep
+
+# ── Variables d'environnement ─────────────────────────────────────────────────
+.env
+.env.local
+!.env.example
+!MailSuite/.env.example
+
+# ── PipePass résultats et données ─────────────────────────────────────────────
+MailSuite/pipepass_results/
+PipePass/account_details.txt
+PipePass/credentials.txt
+PipePass/account_details.txt.backup
+PipePass/credentials.txt.backup
+PipePass/debug_*.png
+PipePass/debug_*.mhtml
+PipePass/.venv/
+PipePass/created_users.csv
+PipePass/__pycache__/
+
+# ── Logs ──────────────────────────────────────────────────────────────────────
+*.log
+logs/
+
+# ── OS ────────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Archives ──────────────────────────────────────────────────────────────────
+*.zip
+*.tar.gz
+
+# ── PM2 ───────────────────────────────────────────────────────────────────────
+.pm2/
