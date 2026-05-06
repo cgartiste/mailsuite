@@ -83,10 +83,10 @@ export default function AccountsG() {
     toast('Synchronisation en cours...', 'info');
     const r = await api.post(`/accounts-g/${id}/sync`, {});
     if (r.ok) {
-      toast('Synchronisation terminée', 'success');
+      toast(`✓ Sync OK — ${r.data.total || 0} users, ${r.data.domain_count || 0} domaines`, 'success');
       load();
     } else {
-      toast('Erreur de synchronisation', 'error');
+      toast(r.data?.error || 'Erreur de synchronisation', 'error');
     }
     setSyncing(null);
   };
@@ -178,11 +178,12 @@ export default function AccountsG() {
               {/* Stats row */}
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 8, marginBottom: 16 }}>
                 <div style={{ background: 'rgba(52,211,153,0.08)', borderRadius: 10, padding: '10px 12px', textAlign: 'center', border: '1px solid rgba(52,211,153,0.15)' }}>
-                  <div style={{ fontSize: '1.5rem', fontWeight: 900, color: '#34d399', lineHeight: 1 }}>{acc.activeUsers ?? acc.active_users ?? 0}</div>
+                  <div style={{ fontSize: '1.5rem', fontWeight: 900, color: '#34d399', lineHeight: 1 }}>{acc.active_users ?? 0}</div>
+
                   <div style={{ fontSize: '.6rem', fontWeight: 700, color: '#34d399', textTransform: 'uppercase', letterSpacing: '.06em', marginTop: 2 }}>Actifs</div>
                 </div>
                 <div style={{ background: 'rgba(244,63,94,0.08)', borderRadius: 10, padding: '10px 12px', textAlign: 'center', border: '1px solid rgba(244,63,94,0.15)' }}>
-                  <div style={{ fontSize: '1.5rem', fontWeight: 900, color: '#fb7185', lineHeight: 1 }}>{acc.suspendedUsers ?? acc.suspended_users ?? 0}</div>
+                  <div style={{ fontSize: '1.5rem', fontWeight: 900, color: '#fb7185', lineHeight: 1 }}>{acc.suspended_users ?? 0}</div>
                   <div style={{ fontSize: '.6rem', fontWeight: 700, color: '#fb7185', textTransform: 'uppercase', letterSpacing: '.06em', marginTop: 2 }}>Suspendus</div>
                 </div>
                 <div style={{ background: 'rgba(99,102,241,0.08)', borderRadius: 10, padding: '10px 12px', textAlign: 'center', border: '1px solid rgba(99,102,241,0.15)' }}>
