@@ -4,7 +4,7 @@ cd /d "%~dp0"
 
 set PORT=7070
 set MAILSUITE_URL=http://187.127.79.212:3000
-set SELF_URL=http://IP_DU_RDP:7070
+set SELF_URL=http://192.187.97.154:7070
 
 echo ================================
 echo   PipePass Server - Auto Restart
