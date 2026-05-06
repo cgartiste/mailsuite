@@ -7,15 +7,15 @@ npm-debug.log*
 MailSuite/frontend/.next/
 MailSuite/frontend/out/
 
-# ── Bases de données ──────────────────────────────────────────────────────────
-*.db
+# ── Bases de données (incluses — repo privé) ─────────────────────────────────
+# *.db  ← décommentez si vous voulez exclure à nouveau
 *.db-shm
 *.db-wal
 
 # ── Sessions ──────────────────────────────────────────────────────────────────
 MailSuite/.sessions/
 
-# ── Credentials Google Workspace (SENSIBLE) ───────────────────────────────────
+# ── Credentials Google Workspace — transfert manuel via SCP ──────────────────
 MailSuite/gw_creds/
 !MailSuite/gw_creds/.gitkeep
 
