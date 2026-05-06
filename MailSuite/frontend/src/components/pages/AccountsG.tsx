@@ -178,12 +178,11 @@ export default function AccountsG() {
               {/* Stats row */}
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 8, marginBottom: 16 }}>
                 <div style={{ background: 'rgba(52,211,153,0.08)', borderRadius: 10, padding: '10px 12px', textAlign: 'center', border: '1px solid rgba(52,211,153,0.15)' }}>
-                  <div style={{ fontSize: '1.5rem', fontWeight: 900, color: '#34d399', lineHeight: 1 }}>{acc.active_users ?? 0}</div>
-
+                  <div style={{ fontSize: '1.5rem', fontWeight: 900, color: '#34d399', lineHeight: 1 }}>{acc.activeUsers ?? 0}</div>
                   <div style={{ fontSize: '.6rem', fontWeight: 700, color: '#34d399', textTransform: 'uppercase', letterSpacing: '.06em', marginTop: 2 }}>Actifs</div>
                 </div>
                 <div style={{ background: 'rgba(244,63,94,0.08)', borderRadius: 10, padding: '10px 12px', textAlign: 'center', border: '1px solid rgba(244,63,94,0.15)' }}>
-                  <div style={{ fontSize: '1.5rem', fontWeight: 900, color: '#fb7185', lineHeight: 1 }}>{acc.suspended_users ?? 0}</div>
+                  <div style={{ fontSize: '1.5rem', fontWeight: 900, color: '#fb7185', lineHeight: 1 }}>{acc.suspendedUsers ?? 0}</div>
                   <div style={{ fontSize: '.6rem', fontWeight: 700, color: '#fb7185', textTransform: 'uppercase', letterSpacing: '.06em', marginTop: 2 }}>Suspendus</div>
                 </div>
                 <div style={{ background: 'rgba(99,102,241,0.08)', borderRadius: 10, padding: '10px 12px', textAlign: 'center', border: '1px solid rgba(99,102,241,0.15)' }}>
